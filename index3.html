@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Penalti Sepak Bola</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1b4332;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .game-card {
+            background-color: #2d6a4f;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .stadium-display {
+            background-color: #52b788;
+            border: 3px solid #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 2.5rem;
+        }
+
+        .scoreboard {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            background: #081c15;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        .controls button {
+            background-color: #d8f3dc;
+            color: #081c15;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .controls button:hover {
+            background-color: #b7e4c7;
+            transform: scale(1.05);
+        }
+
+        #status {
+            font-size: 1.1rem;
+            font-weight: bold;
+            min-height: 30px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-card">
+        <h1>⚽ Adu Penalti</h1>
+        
+        <div class="scoreboard">
+            Gol: <span id="skor">0</span>
+        </div>
+
+        <!-- Tampilan visual mini -->
+        <div class="stadium-display">
+            <div id="gawang">🥅 🧤</div>
+            <div id="bola" style="margin-top: 10px;">⚽</div>
+        </div>
+
+        <p>Pilih arah tendanganmu:</p>
+        <div class="controls">
+            <button onclick="tendang('kiri')">⬅️ Kiri</button>
+            <button onclick="tendang('tengah')">⬆️ Tengah</button>
+            <button onclick="tendang('kanan')">➡️ Kanan</button>
+        </div>
+
+        <div id="status">Pilih arah untuk menendang!</div>
+    </div>
+
+    <!-- Menghubungkan ke script.js -->
+    <script src="script3.js"></script>
+</body>
+</html>
